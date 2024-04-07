@@ -20,9 +20,6 @@ jobs:
             exit 1
           fi
 
-      - name: Construir o projeto
-        run: echo "Etapa de build - Nenhuma ação específica necessária para um projeto HTML."
-
   test:
     runs-on: ubuntu-latest
 
@@ -30,15 +27,11 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Verificar se o projeto contém arquivos HTML
-        run: |
-          if ! find . -name "*.html" -print -quit | grep -q .; then
-            echo "Erro: O projeto não contém arquivos HTML."
-            exit 1
-          fi
+      - name: Instalar dependências
+        run: npm install
 
       - name: Testar o projeto
-        run: echo "Etapa de teste - Nenhuma ação específica necessária para um projeto HTML."
+        run: npm test
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,12 +40,9 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Verificar se o projeto contém arquivos HTML
+      - name: Verificar integridade dos arquivos do projeto
         run: |
-          if ! find . -name "*.html" -print -quit | grep -q .; then
-            echo "Erro: O projeto não contém arquivos HTML."
+          if ! git diff --quiet; then
+            echo "Erro: O projeto possui arquivos modificados."
             exit 1
           fi
-
-      - name: Implantação
-        run: echo "Etapa de implantação - Nenhuma ação específica necessária para um projeto HTML."
