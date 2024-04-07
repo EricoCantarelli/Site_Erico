@@ -13,15 +13,18 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Verificar se o projeto contém arquivos HTML
+        run: |
+          if ! find . -name "*.html" -print -quit | grep -q .; then
+            echo "Erro: O projeto não contém arquivos HTML."
+            exit 1
+          fi
 
       - name: Construir o projeto
-        run: npm run build
+        run: echo "Etapa de build - Nenhuma ação específica necessária para um projeto HTML."
 
       - name: Testar o projeto
-        run: npm test
+        run: echo "Etapa de teste - Nenhuma ação específica necessária para um projeto HTML."
 
       - name: Implantação
-        run: |
-          
+        run: echo "Etapa de implantação - Nenhuma ação específica necessária para um projeto HTML."
