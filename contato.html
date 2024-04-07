@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta neme="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato Érico</title>
+    <link rel="stylesheet" href="./Css/principal.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="form.js"></script>
+
+
+
+</head>
+
+<!--Essa foi a página mais trabalhosa, utilizei inputs para o formulário, seguido de um botão do tipo submit personalizado
+Mesmo sendo pedido pelo trabalho apenas a parte visual, eu me empolguei um pouco e fui além, adicionei a função enviar formulário utilizando um servidor-->
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+    </div>
+
+    <header class="menu">
+        <main>
+            <div class="nome">
+                <h1>Érico Cantarelli Neto</h1>
+            </div>
+            <div class="contato">
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/%C3%A9rico-cantarelli-neto/" target="_blank"><img
+                                src="./Imagens/linkedin.png" height="50px" width="50px"></a>
+                        <a href="https://www.instagram.com/ericocantarelli/" target="_blank"><img
+                                src="./Imagens/Instagram.png" height="50px" width="50px"></a>
+
+                </ul>
+
+
+            </div>
+
+        </main>
+    </header>
+
+    <main class="alinhamento">
+        <div class="menu2">
+            <div class="opções">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="objetivos.html">OBJETIVOS</a></li>
+                    <li><a href="qualificações.html">QUALIFICAÇÕES</a></li>
+                    <li><a href="hobbies.html">HOBBIES</a></li>
+                    <li><a href="contato.html">CONTATO</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="formulário">
+
+        <div class="títuloform">
+            <h2>ENTRE EM CONTATO</h2>
+
+            <div class="msg"></div>
+
+            <form action="https://submit-form.com/QvNnWfWi" class="form" id="form">
+                <input class="field" name="name" placeholder="Nome" id="nome">
+                <input class="field" name="email" placeholder="E-mail" id="email">
+                <input class="field" name="number" placeholder="Celular" id="celular">
+                <textarea class="text" name="texto" placeholder="Digite sua mensagem" id="texto"></textarea>
+                <button type="submit" id="submitButton">Enviar</button>
+
+
+            </form>
+
+            <div class="limparFormulário">
+                <button id="refresh" class="cleanForm">Limpar formulário</button>
+            </div>
+
+            <!--Agora declaramos JavaScript pra adicionar a função refresh no botão limpar formulário-->
+
+            <script>
+                var rf = document.querySelector("#refresh");
+                rf.addEventListener("click", function () {
+                    location.reload();
+                });
+            </script>
+
+
+
+
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

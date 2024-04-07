@@ -1,0 +1,146 @@
+.alinhamento {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+main {
+    position: relative;
+    margin: 0 auto;
+    width: 1020px;
+    padding: 0;
+}
+
+p {
+    color: rgb(56, 56, 56);
+    ;
+}
+
+.menu {
+    background-color: rgba(60, 82, 63, 0.993);
+    height: 200px;
+    width: 100%;
+}
+
+.nome {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 58%;
+    padding: 70px;
+    float: left;
+    color: rgb(197, 197, 197);
+}
+
+.contato ul li {
+    float: right;
+    list-style: none;
+    display: inline-block;
+}
+
+.contato {
+    width: 35%;
+    float: left;
+    padding: 70px;
+}
+
+.menu2 {
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    border-bottom: 4px solid rgb(227, 239, 240);
+
+
+}
+
+.opções {
+    width: 95%;
+    text-align: center;
+}
+
+.opções ul li {
+    color: dimgrey;
+    list-style: none;
+    display: inline-block;
+    padding: 27px;
+    text-align: center;
+
+}
+
+.opções a {
+    text-decoration: none;
+    color: rgb(56, 56, 56);
+    font-size: 17px;
+
+}
+
+.opções :hover {
+    color: rgb(133, 199, 185);
+}
+
+.primeiroParágrafo {
+    text-align: center;
+    font-size: 15px;
+}
+
+.imagemprincipal {
+    padding: 15px;
+    text-align: center;
+
+}
+
+.imagem2 {
+    padding: 20px;
+
+}
+
+.imagem2,
+.objetivo1 {
+    display: inline-block;
+
+}
+
+.objetivo1 {
+    font-size: 20px;
+
+}
+
+.borda1 {
+    width: 100%;
+    height: 5px;
+    border-bottom: 4px solid rgb(227, 239, 240);
+}
+
+.imagem3 {
+    padding: 20px;
+}
+
+.imagem3,
+.objetivo2 {
+    display: inline-block;
+}
+
+.objetivo2 {
+    font-size: 20px;
+}
+
+.borda2 {
+    width: 100%;
+    height: 5px;
+    border-bottom: 4px solid rgb(227, 239, 240);
+}
+
+.imagem4 {
+    padding: 20px;
+}
+
+.imagem4,
+.objetivo3 {
+    display: inline-block;
+}
+
+.objetivo3 {
+    font-size: 20px;
+}
