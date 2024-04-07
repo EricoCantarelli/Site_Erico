@@ -30,8 +30,8 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
-      - name: Verificar dependências
-        run: npm audit
+      - name: Verificar formatação do código
+        run: npm run lint
 
   deploy:
     runs-on: ubuntu-latest
