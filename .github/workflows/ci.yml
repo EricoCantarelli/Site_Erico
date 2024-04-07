@@ -34,8 +34,11 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
+      - name: Instalar ESLint
+        run: npm install eslint --save-dev
+
       - name: Verificar formatação do código JavaScript
-        run: npx eslint .
+        run: eslint .
 
   deploy:
     runs-on: ubuntu-latest
