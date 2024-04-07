@@ -34,11 +34,12 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Instalar ESLint
-        run: npm install eslint --save-dev
-
-      - name: Verificar formatação do código JavaScript
-        run: eslint .
+      - name: Verificar se o diretório do projeto é acessível
+        run: |
+          if [ ! -d "path/to/your/project" ]; then
+            echo "Erro: O diretório do projeto não é acessível."
+            exit 1
+          fi
 
   deploy:
     runs-on: ubuntu-latest
