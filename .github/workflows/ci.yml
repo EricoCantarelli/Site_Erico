@@ -34,15 +34,8 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Verificar formatação do código HTML
-        run: |
-          if ! htmlhint "index.html"; then
-            echo "Erro: O código HTML não está formatado corretamente."
-            exit 1
-          fi
-
-      - name: Verificar formatação do código
-        run: npm run lint
+      - name: Executar testes do projeto
+        run: npm test
 
   deploy:
     runs-on: ubuntu-latest
