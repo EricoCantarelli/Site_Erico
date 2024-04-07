@@ -27,8 +27,12 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Verificar se o projeto contém arquivos CSS
+        run: |
+          if ! find . -name "*.css" -print -quit | grep -q .; then
+            echo "Erro: O projeto não contém arquivos CSS."
+            exit 1
+          fi
 
       - name: Verificar formatação do código
         run: npm run lint
