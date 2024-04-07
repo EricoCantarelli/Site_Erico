@@ -34,9 +34,6 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v2
 
-      - name: Navegar até o diretório do projeto
-        run: cd Site_Erico
-
       - name: Executar testes do projeto
         run: npm test
 
