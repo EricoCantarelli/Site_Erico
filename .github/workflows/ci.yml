@@ -23,8 +23,36 @@ jobs:
       - name: Construir o projeto
         run: echo "Etapa de build - Nenhuma ação específica necessária para um projeto HTML."
 
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Verificar se o projeto contém arquivos HTML
+        run: |
+          if ! find . -name "*.html" -print -quit | grep -q .; then
+            echo "Erro: O projeto não contém arquivos HTML."
+            exit 1
+          fi
+
       - name: Testar o projeto
         run: echo "Etapa de teste - Nenhuma ação específica necessária para um projeto HTML."
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Verificar se o projeto contém arquivos HTML
+        run: |
+          if ! find . -name "*.html" -print -quit | grep -q .; then
+            echo "Erro: O projeto não contém arquivos HTML."
+            exit 1
+          fi
 
       - name: Implantação
         run: echo "Etapa de implantação - Nenhuma ação específica necessária para um projeto HTML."
